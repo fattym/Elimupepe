@@ -38,7 +38,7 @@ class DashboardScreen extends StatelessWidget {
                     const Row(
                       children: [
                         Text(
-                          "Hello, Student!",
+                          "jambo, Student!",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 24,
