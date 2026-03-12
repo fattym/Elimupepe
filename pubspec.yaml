@@ -41,6 +41,7 @@ dependencies:
   http: ^1.1.0
   r_upgrade: ^0.4.2
   package_info_plus: ^9.0.0
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -93,3 +94,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "./assets/favicon.ico"
+  min_sdk_android: 21
