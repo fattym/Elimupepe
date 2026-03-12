@@ -1,9 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import '../../theme/app_theme.dart';
+import '../../services/update_service.dart';
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
+
+  @override
+  State<DashboardScreen> createState() => _DashboardScreenState();
+}
+
+class _DashboardScreenState extends State<DashboardScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Check for updates when dashboard loads
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      UpdateService.checkAndUpdate(context);
+    });
+  }
 
   Future<void> _handleRefresh() async {
     // Simulate API call to fetch updated progress
